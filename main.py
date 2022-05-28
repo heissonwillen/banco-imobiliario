@@ -1,7 +1,6 @@
 from extensao.graficos import salva_graficos
 from extensao.estatisticas import obtem_estatisticas, imprime_estatisticas
 from extensao.argumentos import argumentos
-import matplotlib.pyplot as plt
 import banco_imobiliario.jogadores as jogadores
 import banco_imobiliario.tabuleiro as tabuleiro
 
