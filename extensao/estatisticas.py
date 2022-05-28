@@ -21,7 +21,8 @@ def imprime_estatisticas(media_turnos: int,
                          vencedores: dict, turnos: list):
     print(f"Média de turnos por partida: {media_turnos:.2f}")
     print(f"Partidas terminadas em timeout: {quantidade_timeout}")
-    print(f"Jogador com mais vitórias: {max(vencedores, key=lambda k: vencedores[k])}")
+    print(f"Jogador com mais vitórias: \
+{max(vencedores, key=lambda k: vencedores[k])}")
     print("Porcentagem de vitórias por jogador:")
     for k, v in vencedores.items():
         print(f" - {k}: {v:.2f}%")
