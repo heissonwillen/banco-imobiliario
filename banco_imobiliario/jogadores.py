@@ -13,3 +13,7 @@ class JogadorBase():
             if self.decide_compra(prop):
                 self.paga(prop.custo_venda)
                 prop.dono = self
+
+    @classmethod
+    def decide_compra(self, prop: Propriedade) -> bool:
+        raise NotImplementedError    
