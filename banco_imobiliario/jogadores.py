@@ -31,3 +31,8 @@ class JogadorBase():
 class JogadorImpulsivo(JogadorBase):
     def decide_compra(self, prop: Propriedade) -> bool:
         return True
+
+
+class JogadorExigente(JogadorBase):
+    def decide_compra(self, prop: Propriedade) -> bool:
+        return prop.valor_aluguel > 50
