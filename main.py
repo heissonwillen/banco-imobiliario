@@ -46,6 +46,7 @@ parser.add_argument('--num-partidas',
 
 arguments = parser.parse_args()
 
+
 def cria_tabuleiro():
     return tabuleiro.Tabuleiro(
         jogadores=[jogadores.JogadorImpulsivo(saldo=arguments.saldo_inicial),
@@ -57,7 +58,8 @@ def cria_tabuleiro():
         bonus_rodada=arguments.bonus_rodada)
 
 
-res_jogos = [cria_tabuleiro().joga_partida() for _ in range(arguments.num_partidas)]
+res_jogos = [cria_tabuleiro().joga_partida()
+             for _ in range(arguments.num_partidas)]
 res_jogos.sort(key=lambda r: r["vencedor"])
 turnos = [res.get("turno") for res in res_jogos]
 timeout = len([res for res in res_jogos if res.get("timeout")])
