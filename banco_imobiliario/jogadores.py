@@ -26,3 +26,8 @@ class JogadorBase():
         self.saldo -= valor
         if dono:
             dono.saldo += valor
+
+
+class JogadorImpulsivo(JogadorBase):
+    def decide_compra(self, prop: Propriedade) -> bool:
+        return True
