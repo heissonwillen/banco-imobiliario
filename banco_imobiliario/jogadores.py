@@ -6,6 +6,10 @@ class JogadorBase():
         self.saldo = saldo
         self.posicao = 0
 
+    @property
+    def nome(self) -> str:
+        return self.__class__.__name__.replace("Jogador", "")
+
     def interage_com_propriedade(self, prop: Propriedade) -> None:
         if prop.dono and prop.dono != self:
             self.paga(prop.valor_aluguel, prop.dono)
