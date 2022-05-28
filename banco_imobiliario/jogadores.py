@@ -5,7 +5,7 @@ class JogadorBase():
     def __init__(self, saldo: int = 300) -> None:
         self.saldo = saldo
         self.posicao = 0
-        
+
     def interage_com_propriedade(self, prop: Propriedade) -> None:
         if prop.dono and prop.dono != self:
             self.paga(prop.valor_aluguel, prop.dono)
@@ -16,4 +16,9 @@ class JogadorBase():
 
     @classmethod
     def decide_compra(self, prop: Propriedade) -> bool:
-        raise NotImplementedError    
+        raise NotImplementedError
+
+    def paga(self, valor, dono=None) -> None:
+        self.saldo -= valor
+        if dono:
+            dono.saldo += valor
