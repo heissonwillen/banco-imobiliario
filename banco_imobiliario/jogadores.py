@@ -1,3 +1,4 @@
+import random
 from banco_imobiliario.propriedade import Propriedade
 
 
@@ -41,3 +42,8 @@ class JogadorExigente(JogadorBase):
 class JogadorCauteloso(JogadorBase):
     def decide_compra(self, prop: Propriedade) -> bool:
         return self.saldo - prop.custo_venda > 80
+
+
+class JogadorAleatorio(JogadorBase):
+    def decide_compra(self, prop: Propriedade) -> bool:
+        return random.choice([True, False])
