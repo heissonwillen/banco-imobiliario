@@ -49,13 +49,14 @@ python3.10 main.py --salvar-graficos --imprimir-estatisticas
 
 Obtem-se:
 ```console
-Média de turnos por partida: 136.42
-Partidas terminadas em timeout: 4
+Média de turnos por partida: 122.04
+Partidas terminadas em timeout: 1
+Jogador com mais vitórias: Cauteloso
 Porcentagem de vitórias por jogador:
- - Aleatorio: 19.00%
- - Cauteloso: 50.67%
- - Exigente: 9.33%
- - Impulsivo: 21.00%
+ - Aleatorio: 20.00%
+ - Cauteloso: 57.00%
+ - Exigente: 6.67%
+ - Impulsivo: 16.33%
 ```
 
 Além disso, é gerada uma visuazação dos resultados obtidos a partir das simulações. As imagens ficam salvas no diretório ```/imagens``` e podem ser visualizadas a seguir.
