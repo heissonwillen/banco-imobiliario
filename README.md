@@ -66,4 +66,6 @@ Além disso, é gerada uma visuazação dos resultados obtidos a partir das simu
 ![num_turnos](imagens/num_turnos.png)
 
 ### Executando os testes
-Em construção
+- Execute o comando a seguir.
+```pytest
+```
