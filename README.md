@@ -67,5 +67,6 @@ Além disso, é gerada uma visuazação dos resultados obtidos a partir das simu
 
 ### Executando os testes
 - Execute o comando a seguir.
-```pytest
+```shell
+pytest
 ```
