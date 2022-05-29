@@ -3,14 +3,17 @@ from extensao.estatisticas import obtem_estatisticas, imprime_estatisticas
 from extensao.argumentos import argumentos
 import banco_imobiliario.jogadores as jogadores
 import banco_imobiliario.tabuleiro as tabuleiro
+import random
 
 
 def cria_tabuleiro():
+    jogs = [jogadores.JogadorImpulsivo(saldo=argumentos.saldo_inicial),
+            jogadores.JogadorExigente(saldo=argumentos.saldo_inicial),
+            jogadores.JogadorCauteloso(saldo=argumentos.saldo_inicial),
+            jogadores.JogadorAleatorio(saldo=argumentos.saldo_inicial)]
+
     return tabuleiro.Tabuleiro(
-        jogadores=[jogadores.JogadorImpulsivo(saldo=argumentos.saldo_inicial),
-                   jogadores.JogadorExigente(saldo=argumentos.saldo_inicial),
-                   jogadores.JogadorCauteloso(saldo=argumentos.saldo_inicial),
-                   jogadores.JogadorAleatorio(saldo=argumentos.saldo_inicial)],
+        jogadores=random.sample(jogs, len(jogs)),
         num_props=argumentos.num_props,
         limite_turnos=argumentos.limite_turnos,
         bonus_rodada=argumentos.bonus_rodada)
